@@ -1,0 +1,13 @@
+            int år;
+            år = int.Parse(txtÅr.Text);
+
+            if ((år %= 4) - (år / 4) == 0 && (år %= 100) - (år / 100) < 0)
+            {
+                lblResult.Text = "Det er et skudår";
+            } 
+            else if((år %= 400) - (år / 400) == 0)
+            {
+                lblResult.Text = "Det er et skudår";
+            }        
+            else
+                lblResult.Text = "Det er ikk et skudår";
